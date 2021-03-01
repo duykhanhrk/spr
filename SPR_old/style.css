@@ -1,0 +1,234 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0px;
+}
+
+body {
+    background-color: #FFF;
+}
+
+#mi-background {
+    background-image: url("src/mi-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000;
+
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+#fi-pane {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+#rew-pane {
+    display: none;
+    background-color: #A0A6;
+    position: absolute;
+    left: 0px;
+    right: 50%;
+    bottom: 0px;
+    top: 0px;
+    text-align: center;
+}
+
+#rew-btt {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+}
+
+#rew-btt:hover {
+    width: 42px;
+    height: 42px;
+    transition: 0.6s;
+}
+
+#rew-icon {
+    width: 100%;
+    height: 100%;
+}
+
+#rew {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 50%;
+
+    filter: blur(8px);
+    -webkit-filter: blur(10px);
+}
+
+#cp-tw-title {
+    color: #0AA;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    top: 0px;
+    right: 0px;
+    padding: 8px;
+}
+
+#pe-tw-title {
+    color: #A0A;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    top: 60%;
+    right: 0px;
+    padding: 8px;
+}
+
+#mi-pane {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+#vs-pane {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+}
+
+#md-pane {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+#md-title {
+    color: #F0A;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -33px;
+    font-size: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cp-title {
+    color: #FFF;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cp {
+    background-color: #F0F6;
+}
+
+.pe {
+    background-color: #00F6;
+}
+
+
+.pe-pane {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    text-align: center;
+}
+
+.pe-control-center-pane {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    margin-top: -90px;
+}
+
+.pe-control-pane {
+    overflow: hidden;
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+}
+
+.pe-control {
+    width: 180px;
+    height: 180px;
+}
+
+.eff {
+    transform: rotateZ(0deg);
+    transition: 0.3s;
+}
+
+.eff:hover {
+    transform: rotateZ(50deg);
+    transition: 0.6s;
+}
+
+.vs-pe-pane {
+    position: relative;
+    width: 100%;
+    height: 40%;
+}
+
+.vs-cp {
+    text-align: left;
+}
+
+.vs-pe {
+    text-align: right;
+}
+
+.vs-md-pane {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+#vs-title {
+    color: #FAA;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#vs-cp-control {
+    transform: rotateZ(45deg);
+}
+
+#vs-pe-control {
+    transform: rotateZ(-45deg);
+}
+
+.vs-control {
+    height: 100%;
+    width: auto;
+}

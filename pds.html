@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pds</title>
+        <link rel="stylesheet" href="pds.css"/>
+    </head>
+    <body oncontextmenu="return false">
+        <!-- Player pane -->
+        <div id="play-pane" class="play-pane">
+            <div id="vs-control-pane-top" class="vs-control-pane-top">
+                <img id="vs-control-pane-top-content" class="vs-control-size" src="src/rock.png"/>
+            </div>
+
+            <div id="vs-control-pane-bottom" class="vs-control-pane-bottom">
+                <img id="vs-control-pane-bottom-content" class="vs-control-size" src="src/_scissors.png"/>
+            </div>
+
+            <p id="vs-words" class="vs-words"></p>
+
+            <div id="intimate-pane" class= "intimate-pane">
+                <div class="sub-intimate-pane">
+                    <p id="cp-win-count" class="intimate-words">0</p>
+                </div>
+                <div class="sub-intimate-pane">
+                    <p id="turn-count" class="intimate-words">0</p>
+                </div>
+                <div class="sub-intimate-pane">
+                    <p id="pl-win-count" class="intimate-words">0</p>
+                </div>
+            </div>
+
+            <div id="player-pane-top" class="player-pane-top shadow-bottom">
+                <div class="expr-words-pane">
+                    <p class="expr-words">Hello</p>
+                </div>
+
+                <div class="request-pane shadow-top">
+                    <div class="request-item-pane">
+                        <div class="ri-content-pane-p">
+                            <img class="ri-icon-p" src="src/grid_icon_1.png"/>
+                        </div>
+                    </div>
+
+                    <div id="rew-request" class="request-item-pane">
+                        <div class="ri-content-pane-p">
+                            <img class="ri-icon-p" src="src/rew_icon.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="intimate-bar-bottom">
+                    <p id="cp-win" class="score-words">0</p>
+                </div>
+            </div>
+
+            <div id="player-pane-bottom" class="player-pane-bottom shadow-top">
+                <div class="intimate-bar-top">
+                    <p id="pl-win" class="score-words">0</p>
+                </div>
+                <div class="player-controls-pane">
+                    <div id="scissors-choice" class="player-control-pane">
+                        <img class="player-control" src="src/_scissors.png"/>
+                    </div>
+                    <div id="paper-choice" class="player-control-pane">
+                        <img class="player-control" src="src/_paper.png"/>
+                    </div>
+                    <div id="rock-choice" class="player-control-pane">
+                        <img class="player-control" src="src/_rock.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fog pane -->
+        <div id="fog-pane" class="fog-pane"></div>
+
+        <!-- Rew pane -->
+        <div id="rew-pane" class="rew-pane">
+            <div id="rew-content" class="rew-content">
+                <div id="rew-container" class="rew-container">
+                    <img id="rew" class="rew" src="src/rew/illust.jpg"/>
+                    <div class="fog-grid">
+                        <div id="fog-8" class="box fog-box"></div>
+                        <div id="fog-11" class="box fog-box"></div>
+                        <div id="fog-2" class="box fog-box"></div>
+                        <div id="fog-15" class="box fog-box"></div>
+                        <div id="fog-17" class="box fog-box"></div>
+                        <div id="fog-16" class="box fog-box"></div>
+                        <div id="fog-19" class="box fog-box"></div>
+                        <div id="fog-6" class="box fog-box"></div>
+                        <div id="fog-4" class="box fog-box"></div>
+                        <div id="fog-10" class="box fog-box"></div>
+                        <div id="fog-5" class="box fog-box"></div>
+                        <div id="fog-12" class="box fog-box"></div>
+                        <div id="fog-18" class="box fog-box"></div>
+                        <div id="fog-9" class="box fog-box"></div>
+                        <div id="fog-1" class="box fog-box"></div>
+                        <div id="fog-13" class="box fog-box"></div>
+                        <div id="fog-7" class="box fog-box"></div>
+                        <div id="fog-20" class="box fog-box"></div>
+                        <div id="fog-3" class="box fog-box"></div>
+                        <div id="fog-14" class="box fog-box"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rew-tool-pane shadow-top">
+                <div id="rew-back-control" class="rew-tool-item-pane">
+                    <div class="rti-content-pane">
+                        <img class="rti-icon" src="src/back_icon.png"/>
+                    </div>
+                </div>
+
+                <div class="rew-tool-item-pane">
+                    <div class="rti-content-pane">
+                        <input id="rew-color-control" type="color" class="rti-input" value="#FFFFFF"/>
+                    </div>
+                </div>
+
+                <div class="rew-tool-item-pane">
+                    <div class="rti-content-pane">
+                        <input id="rew-size-control" type="number" class="rti-input" max="100" min="20" value="50"/>
+                    </div>
+                </div>
+
+                <div id="rew-fixed-control" class="rew-tool-item-pane">
+                    <div class="rti-content-pane">
+                        <img class="rti-icon" src="src/_fixed_icon.png"/>
+                    </div>
+                </div>
+
+                <div id="rew-unfixed-control" class="rew-tool-item-pane hidden">
+                    <div class="rti-content-pane">
+                        <img class="rti-icon" src="src/fixed_icon.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="pds.js"></script>
+    </body>
+</html>

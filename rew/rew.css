@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* words bar */
+
+.words-bar {
+    background-color: #FFF;
+
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+
+    height: 48px;
+}
+
+.words-bar-text {
+    color: #000;
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+
+    margin-top: -11px;
+
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+}
+
+/* button */
+
+.button {
+    background-color: #FFF;
+
+    position: absolute;
+    width: 105px;
+    height: 42px;
+}
+
+.button-content {
+    box-sizing: content-box;
+    -webkit-box-sizing: border-box;
+
+    position: relative;
+
+    width: inherit;
+    height: inherit;
+
+    padding: 8px;
+}
+
+.button-text {
+    color: #000;
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+
+    margin-top: -9px;
+
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+}
+
+/* button with type black */
+
+.button[type="black-opacity"] {
+    background-color: #0001;
+}
+
+.button[type="black-opacity"]:hover {
+    background-color: #0002;
+}
+
+.button[type="black-opacity"]:active {
+    background-color: #0001;
+}
+
+/* button with type black */
+
+.button[type="white-opacity"] {
+    background-color: #FFF1;
+}
+
+.button[type="white-opacity"]:hover {
+    background-color: #FFF2;
+}
+
+.button[type="white-opacity"]:active {
+    background-color: #FFF1;
+}
+
+/* button with type black-border */
+
+.button[type="black-border"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    border: 1px solid #0002;
+}
+
+.button[type="black-border"]:hover {
+    border: 1px solid #0004;
+}
+
+.button[type="black-border"]:active {
+    border: 1px solid #0002;
+}
+
+/* button with type white-border */
+
+.button[type="white-border"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    border: 1px solid #FFF2;
+}
+
+.button[type="white-border"]:hover {
+    border: 1px solid #FFF4;
+}
+
+.button[type="white-border"]:active {
+    border: 1px solid #FFF2;
+}
+
+/* button with type black-shadow */
+
+.button[type="black-shadow"] {
+    box-shadow: 0 0 8px 0 #0004;
+    transition: box-shadow 0.5s;
+}
+
+.button[type="black-shadow"]:hover {
+    box-shadow: 0 0 8px 0 #0006;
+}
+
+.button[type="black-shadow"]:active {
+    box-shadow: none;
+}
+
+/* button with type white-shadow */
+
+.button[type="white-shadow"] {
+    box-shadow: 0 0 8px 0 #FFF4;
+    transition: box-shadow 0.5s;
+}
+
+.button[type="white-shadow"]:hover {
+    box-shadow: 0 0 8px 0 #FFF6;
+}
+
+.button[type="white-shadow"]:active {
+    box-shadow: none;
+}
+
+/* content pane */
+
+.content-pane {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+/* grid view */
+
+.grid-view {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: auto;
+
+    font-size: 0px;
+}
+
+.grid-view-item {
+    display: inline-block;
+    margin: 8px;
+}
+
+.grid-view-item-content {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    width: auto;
+    height: auto;
+
+    padding: 0px;
+}
+
+.grid-view[type="box"] > .grid-view-item > .grid-view-item-content > .grid-view-item-template {
+    width: 100px;
+    height: 100px;
+}
+
+.grid-view[type="image-title"] > .grid-view-item {
+    background-color: #FFF;
+    /* transition: box-shadow 0.3s; */
+}
+
+.grid-view[type="image-title"] > .grid-view-item > .grid-view-item-content > .grid-view-item-template {
+    width: 320px;
+    height: 228px;
+}
+
+.grid-view[type="image-title"] > .grid-view-item > .grid-view-item-content > .grid-view-item-template > .grid-view-item-image-pane {
+    background-color: #FFF;
+    width: 320px;
+    height: 180px;
+
+    box-shadow: 0 0 8px 0 #0004;
+    /* transition: box-shadow 0.3s; */
+}
+
+.grid-view[type="image-title"] > .grid-view-item > .grid-view-item-content > .grid-view-item-template > .grid-view-item-image-pane > .grid-view-item-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #FFF;
+
+    width: 320px;
+    height: 180px;
+}
+
+.grid-view[type="image-title"] > .grid-view-item > .grid-view-item-content > .grid-view-item-template > .grid-view-item-text-pane {
+    width: 320px;
+    height: 48px;
+}
+
+.grid-view[type="image-title"] > .grid-view-item >  .grid-view-item-content > .grid-view-item-template > .grid-view-item-text-pane > .grid-view-item-text {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000;
+    text-align: center;
+    padding-top: 14px;
+}
+
+.grid-view[type="image-title"] > .grid-view-item:hover {
+    box-shadow: 0 0 8px 0 #0004;
+}
+
+.grid-view[type="image-title"] > .grid-view-item:hover > .grid-view-item-content > .grid-view-item-template > .grid-view-item-image-pane {
+    box-shadow: none;
+}
+
+.grid-view[type="image-title"] > .grid-view-item:active {
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+
+/* shadow */
+
+.black-shadow {
+    box-shadow: 0 0 8px 0 #0004;
+}
+
+.black-shadow-left {
+    box-shadow: -4px 0 8px 0 #0004;
+}
+
+.black-shadow-right {
+    box-shadow: 4px 0 8px 0 #0004;
+}
+
+.black-shadow-top {
+    box-shadow: 0 -4px 8px 0 #0004;
+}
+
+.black-shadow-bottom {
+    box-shadow: 0 4px 8px 0 #0004;
+}
+
+.white-shadow {
+    box-shadow: 0 0 8px 0 #FFF4;
+}
+
+.white-shadow-left {
+    box-shadow: -4px 0 8px 0 #FFF4;
+}
+
+.white-shadow-right {
+    box-shadow: 4px 0 8px 0 #FFF4;
+}
+
+.white-shadow-top {
+    box-shadow: 0 -4px 8px 0 #FFF4;
+}
+
+.white-shadow-bottom {
+    box-shadow: 0 4px 8px 0 #FFF4;
+}
+
+/* background color */
+
+.words-bar-background {
+    background-color: #FFF;
+}
+
+.button-background {
+    background-color: #FFF;
+}
+
+.app-background {
+    background-color: #FFF;
+}
+
+.blue-background {
+    background-color: blue;
+}
+
+.transparent-background {
+    background-color: transparent;
+}
+
+/* color */
+
+.words-bar-text-color {
+    color: #000;
+}
+
+.button-text-color {
+    color: #000;
+}
+
+.app-color {
+    color: #A0A;
+}
+
+/* width */
+
+.button-width {
+    width: 105px;
+}
+
+/* height */
+
+.button-height {
+    height: 42px;
+}

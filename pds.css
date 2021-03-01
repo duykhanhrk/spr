@@ -1,0 +1,476 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.play-pane {
+    background-color: #FFF;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    transition: left 0.6s;
+}
+
+.player-pane-top {
+    background-color: #FFF;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    /* bottom: 60%; */
+    width: auto;
+    height: 40%;
+    transition: height 0.3s;
+}
+
+.player-pane-bottom {
+    background-color: #FFF;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    /* top: 60%; */
+    bottom: 0%;
+    width: auto;
+    height: 40%;
+    transition: height 0.3s;
+}
+
+.player-pane-hidden {
+    height: 0;
+}
+
+.intimate-bar-bottom {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1px solid #0002;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 48px;
+}
+
+.intimate-bar-top {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #0002;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 48px;
+}
+
+.intimate-pane {
+    background-color: #FFF;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 40%;
+    bottom: 40%;
+    height: 20%;
+    text-align: center;
+    font-size: 0px;
+    transition: left 0.6s, right 0.6s;
+}
+
+.intimate-pane-hidden-right {
+    left: 100%;
+    right: -100%;
+}
+
+.sub-intimate-pane {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+}
+
+.intimate-words {
+    position: relative;
+    top: 50%;
+    margin-top: -25px;
+    color: #A0A;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.expr-words-pane {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 48px;
+}
+
+.expr-words {
+    position: relative;
+    top: 50%;
+    margin-top: -25px;
+    color: #A0A;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.request-pane {
+    background-color: #FFF;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 48px;
+    height: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+
+.request-item-pane {
+    background-color: #FFF;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.request-item-pane:hover {
+    box-shadow: 0px 2px 4px 0px #0002, 0px 3px 10px 0px #0001;
+    transition: 0.5s;
+}
+
+.request-item-pane:active {
+    box-shadow: none;
+}
+
+.ri-content-pane {
+    height: inherit;
+    width: inherit;
+}
+
+.ri-icon {
+    height: inherit;
+    width: inherit;
+}
+
+.ri-content-pane-p {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: inherit;
+    width: inherit;
+    padding: 8px;
+}
+
+.ri-icon-p {
+    height: 32px;
+    width: 32px;
+}
+
+.player-pane-top:hover > .request-pane {
+    height: 64px;
+    padding: 8px;
+    transition: 0.5s;
+}
+
+.score-words {
+    color: #A0A;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    padding-top: 10px;
+}
+
+.player-controls-pane {
+    position: absolute;
+    left: 0px;
+    right: 0px;;
+    top: 48px;
+    bottom: 0px;
+    font-size: 0px;
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.player-control-pane {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    margin-top: -90px;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.player-control-pane:hover > .player-control {
+    transform: rotateZ(45deg);
+    transition: 0.5s;
+}
+
+.player-control-pane:active > .player-control {
+    transform: rotateZ(-45deg);
+}
+
+.player-control {
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(0deg);
+    transition: 0.3s;
+}
+
+.vs-control-pane-top {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: auto;
+    height: 40%;
+    transform: rotateZ(-45deg);
+    transition: transform 0.6s;
+}
+
+.vs-control-pane-bottom {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: auto;
+    height: 40%;
+    transform: rotateZ(45deg);
+    transition: transform 0.6s;
+}
+
+.vcpt-active {
+    transform: rotateZ(45deg);
+}
+
+.vcpb-active {
+    transform: rotateZ(-45deg);
+}
+
+.vs-control-size {
+    width: inherit;
+    height: 100%;
+}
+
+.vs-words {
+    color: #A0A;
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+    margin-top: -34px;
+
+    font-size: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.rew-pane {
+    background-color: #FFF;
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.rew-content {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    background-color: transparent;
+}
+
+.rew-tool-pane {
+    background-color: #FFF;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+
+.rew-pane:hover > .rew-tool-pane {
+    height: 64px;
+    padding: 8px;
+    transition: 0.5s;
+}
+
+.rew-tool-item-pane {
+    background-color: #FFF;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    margin-left: 8px;
+    margin-right: 8px;
+
+    vertical-align: middle;
+}
+
+.rew-tool-item-pane:hover {
+    box-shadow: 0px 2px 4px 0px #0002, 0px 3px 10px 0px #0001;
+    transition: 0.5s;
+}
+
+.rew-tool-item-pane:active {
+    box-shadow: none;
+}
+
+.rew-container {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+}
+
+.rew {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.fog-grid {
+    display: grid;
+    position: absolute;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: transparent;
+    height: inherit;
+    width: inherit;
+}
+
+.fog-box {
+    background-color: #AAA;
+    transition: 0.5s;
+}
+
+.fog-box-hidden {
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.rti-content-pane {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: inherit;
+    width: inherit;
+
+    padding: 8px;
+}
+
+.rti-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.rti-input {
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+}
+
+.rti-input::-webkit-outer-spin-button,
+.rti-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.fog-pane {
+    display: none;
+    background-color: transparent;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.fog-pane-visible {
+    display: block;
+}
+
+.left-half {
+    left: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.shadow-top {
+    box-shadow: 0px -4px 8px 0px #0002, 0px -6px 20px 0px #0001;
+}
+
+.shadow-bottom {
+    box-shadow: 0px 4px 8px 0px #0002, 0px 6px 20px 0px #0001;
+}
+
+.shadow-right {
+    box-shadow: 4px 0px 8px 0px #0002, 6px 0px 20px 0px #0001;
+}
+
+.player-controls-pane::-webkit-scrollbar, .rew-tool-pane::-webkit-scrollbar {
+    width: auto;
+    height: 6px;
+}
+
+.player-controls-pane::-webkit-scrollbar-track, .rew-tool-pane::-webkit-scrollbar-track {
+    background: #FFF;
+}
+
+.player-controls-pane::-webkit-scrollbar-thumb, .rew-tool-pane::-webkit-scrollbar-thumb {
+    background: #AAA6;
+}
+
+.player-controls-pane::-webkit-scrollbar-thumb:hover, .rew-tool-pane::-webkit-scrollbar-thumb:hover {
+    background: #AAA8;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            .rew-pane {
+                background-color: blue;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 60%;
+            }
+
+            .rew-container {
+                position: absolute;
+                height: 500px;
+                width: 100%;
+            }
+
+            .rew-content {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            .fog-grid {
+                display: grid;
+                position: absolute;
+                grid-template-columns: auto auto auto auto auto;
+                background-color: transparent;
+                height: inherit;
+                width: inherit;
+            }
+
+            .box {
+                background-color: transparent;
+            }
+
+            .fog-box {
+                background-color: #AAA;
+            }
+
+            .fog-box:hover {
+                background-color: #BBB;
+                transition: 0.5s;
+            }
+
+            .fog-box:active {
+                background: #AAA;
+            }
+        </style>
+    </head>
+    <body style="background-color: #000;">
+        <div id="rew-pane" class="rew-pane">
+            <div id="rew-container" class="rew-container">
+                <img id="rew-content" class="rew-content" src="src/rew/illust.jpg"/>
+                <div class="fog-grid">
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                    <div class="fog-box"></div>
+                </div>
+            </div>
+        </div>
+       <script>
+           rewPane = document.getElementById("rew-pane");
+           rewContainer = document.getElementById("rew-container");
+           rewContent = document.getElementById("rew-content");
+
+           window.addEventListener("resize", () => {
+                if (rewPane.offsetWidth/rewPane.offsetHeight < rewContent.naturalWidth/rewContent.naturalHeight) {
+                    rewContainer.style.width = rewPane.offsetWidth + "px";
+                    rewContainer.style.height = rewPane.offsetWidth*(rewContent.naturalHeight/rewContent.naturalWidth) + "px";
+                    rewContainer.style.top = (rewPane.offsetHeight - rewPane.offsetWidth*(rewContent.naturalHeight/rewContent.naturalWidth))/2 + "px";
+                    rewContainer.style.bottom = (rewPane.offsetHeight - rewPane.offsetWidth*(rewContent.naturalHeight/rewContent.naturalWidth))/2 + "px";
+                    rewContainer.style.left = "0";
+                    rewContainer.style.right = "0";
+                } else if (rewPane.offsetWidth/rewPane.offsetHeight > rewContent.naturalWidth/rewContent.naturalHeight) {
+                    rewContainer.style.height = rewPane.offsetHeight + "px";
+                    rewContainer.style.width = rewPane.offsetHeight*(rewContent.naturalWidth/rewContent.naturalHeight) + "px";
+                    rewContainer.style.left = (rewPane.offsetWidth - rewPane.offsetHeight*(rewContent.naturalWidth/rewContent.naturalHeight))/2 + "px";
+                    rewContainer.style.right = (rewPane.offsetWidth - rewPane.offsetHeight*(rewContent.naturalWidth/rewContent.naturalHeight))/2 + "px";
+                    rewContainer.style.top = "0";
+                    rewContainer.style.bottom = "0";
+                } else {
+                    rewContainer.style.width = rewPane.offsetWidth;
+                    rewContainer.style.height = rewPane.offsetHeight;
+                }
+           });
+       </script>
+    </body>
+</html>
